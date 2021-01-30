@@ -11,6 +11,7 @@ function handleUpdatedNumber(id, isIncrease) {
 	}
 	mainInput.value = NewCountNumber;
 	totalCalculate();
+	
 };
 
 // function of total value
@@ -44,7 +45,7 @@ bookNowBtn.addEventListener('click', function () {
 	const subTotal = firstClassCount * 150 + economyCount * 100;
 	const tax = subTotal * 0.1;
 	const totalCost = tax + subTotal;
-	console.log(subTotal, tax, totalCost);
+	
 
 	document.getElementById('firstClass-display').innerText = ` First Class Ticket   = ${firstClassCount}`;
 	document.getElementById('economy-display').innerText = ` Economy Class Ticket = ${economyCount}`;
@@ -56,6 +57,9 @@ bookNowBtn.addEventListener('click', function () {
 	document.getElementById('sub_total').innerText = '$ 00';
 	document.getElementById('tax').innerText = '$ 00';
 	document.getElementById('total-cost').innerText = '$ 00';
+	document.getElementById('economy-input-count').value = '0';
+	document.getElementById('firstClass-inputCount').value = '0';
+	
 	//modal style
 	document.getElementById('modal-display').style.display = 'block';
 
